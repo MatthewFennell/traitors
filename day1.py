@@ -1,15 +1,29 @@
 from utils import People as p
 
-Elliott = [p.Joey, p.Lewis, p.Jonny, p.Euthyme, p.Gabby, p.Josh, p.Mark, p.Annabel, p.Jamie]
-SamP = [p.SamO, p.Luke, p.Joel]
-TomC = [p.Matthew, p.Ross]
-Joey = [p.George, p.Jegor]
-Lewis = [p.John]
 
 votes = {
-    p.Elliott.value.name: Elliott,
-    p.SamP.value.name:  SamP,
-    p.TomC.value.name: TomC,
-    p.Joey.value.name: Joey,
-    p.Lewis.value.name: Lewis,
+    # p.Alex.value.name: p.Alex
+    p.Annabel.value.name: p.Elliott,
+    p.Elliott.value.name: p.Joey,
+    p.Euthyme.value.name: p.Elliott,
+    p.Gabby.value.name: p.Elliott,
+    p.George.value.name: p.Joey,
+    p.Jamie.value.name: p.Elliott,
+    p.Jegor.value.name: p.Joey,
+    p.Joel.value.name: p.SamP,
+    p.Joey.value.name: p.Elliott,
+    p.John.value.name: p.Lewis,
+    p.Jonny.value.name: p.Elliott,
+    p.Josh.value.name: p.Elliott,
+    p.Lewis.value.name: p.Elliott,
+    p.Luke.value.name: p.SamP,
+    p.Mark.value.name: p.Elliott,
+    p.Matt.value.name: p.TomC,
+    p.Matthew.value.name: p.TomC,
+    p.Ross.value.name: p.TomC,
+    p.Rupert.value.name: p.SamP,
+    p.SamO.value.name: p.SamP,
+    # p.SamP.value.name MISSING
+    # p.Sophie.value.name DEAD
+    # p.TomC.value.name: MISSING
 }
