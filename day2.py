@@ -13,7 +13,7 @@ votes = {
     p.Joel.value.name: p.TomC,
     p.Joey.value.name: p.Jamie,
     p.John.value.name: p.Alex,
-    p.Jonny.value.name: p.TomC,
+    p.Jonny.value.name: p.Rupert,
     p.Josh.value.name: p.Jamie,
     p.Lewis.value.name: p.Rupert,
     p.Luke.value.name: p.Rupert,

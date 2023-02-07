@@ -21,7 +21,7 @@ class Human():
         self.demise = demise
 
 class People(Enum):
-    Alex = Human('Alex')
+    Alex = Human('Alex', role=Role.FAITHFUL, demise=Demise.KILLED)
     Annabel = Human("Annabel")
     Elliott = Human("Elliott", role=Role.FAITHFUL, demise=Demise.VOTED)
     Euthyme = Human('Euthyme')
@@ -30,7 +30,7 @@ class People(Enum):
     Jamie = Human("Jamie", role=Role.FAITHFUL, demise=Demise.VOTED)
     Jegor = Human('Jegor')
     Joel = Human('Joel')
-    Joey = Human('Joey')
+    Joey = Human('Joey', role=Role.FAITHFUL, demise=Demise.VOTED)
     John = Human('John')
     Jonny = Human('Jonny')
     Josh = Human('Josh')
