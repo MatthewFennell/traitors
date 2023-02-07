@@ -5,7 +5,7 @@ votes = {
     # p.Alex.value.name: p.Alex
     p.Annabel.value.name: p.Elliott,
     p.Elliott.value.name: p.Joey,
-    p.Euthyme.value.name: p.Elliott,
+    p.Euthyme.value.name: p.Lewis,
     p.Gabby.value.name: p.Elliott,
     p.George.value.name: p.Joey,
     p.Jamie.value.name: p.Elliott,
