@@ -34,7 +34,7 @@ class People(Enum):
     John = Human('John')
     Jonny = Human('Jonny')
     Josh = Human('Josh')
-    Lewis = Human('Lewis')
+    Lewis = Human('Lewis', role=Role.FAITHFUL, demise=Demise.VOTED)
     Luke = Human('Luke')
     Mark = Human('Mark')
     Matt = Human("Matt")
