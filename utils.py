@@ -41,7 +41,7 @@ class People(Enum):
     Matthew = Human('Matthew', role=Role.FAITHFUL, demise=Demise.KILLED)
     Ross = Human('Ross')
     Rupert = Human("Rupert", role=Role.FAITHFUL, demise=Demise.VOTED)
-    SamO = Human('SamO')
+    SamO = Human('SamO', role=Role.FAITHFUL, demise=Demise.KILLED)
     SamP = Human('SamP')
     Sophie = Human("Sophie", role=Role.FAITHFUL, demise=Demise.KILLED)
     TomC = Human('TomC')
