@@ -21,40 +21,49 @@ class Human():
         self.demise = demise
 
 class People(Enum):
-    Alex = Human('Alex', role=Role.FAITHFUL, demise=Demise.KILLED)
+
     Annabel = Human("Annabel")
-    Elliott = Human("Elliott", role=Role.FAITHFUL, demise=Demise.VOTED)
-    Euthyme = Human('Euthyme')
-    Gabby = Human('Gabby')
-    George = Human("George", role=Role.FAITHFUL, demise=Demise.KILLED)
-    Jamie = Human("Jamie", role=Role.FAITHFUL, demise=Demise.VOTED)
-    Jegor = Human('Jegor')
-    Joel = Human('Joel')
-    Joey = Human('Joey', role=Role.FAITHFUL, demise=Demise.VOTED)
-    John = Human('John')
-    Jonny = Human('Jonny')
-    Josh = Human('Josh')
-    Lewis = Human('Lewis', role=Role.FAITHFUL, demise=Demise.VOTED)
-    Luke = Human('Luke')
-    Mark = Human('Mark')
-    Matt = Human("Matt")
-    Matthew = Human('Matthew', role=Role.FAITHFUL, demise=Demise.KILLED)
-    Ross = Human('Ross')
-    Rupert = Human("Rupert", role=Role.FAITHFUL, demise=Demise.VOTED)
-    SamO = Human('SamO', role=Role.FAITHFUL, demise=Demise.KILLED)
-    SamP = Human('SamP')
-    Sophie = Human("Sophie", role=Role.FAITHFUL, demise=Demise.KILLED)
-    TomC = Human('TomC')
+    Ben = Human("Ben")
+    Elliott = Human("Elliott")
+    Euthyme = Human("Euthyme")
+    Gabby = Human("Gabby")
+    Gary = Human("Gary")
+    Gazell = Human("Gazell")
+    James = Human("James")
+    Jegor = Human("Jegor")
+    Jesse = Human("Jesse")
+    Jessica = Human("Jessica")
+    Joel = Human("Joel")
+    Joey = Human("Joey")
+    Julian = Human("Julian")
+    Kay = Human("Kay")
+    Katie = Human("Katie")
+    Lewis = Human("Lewis")
+    Mark = Human("Mark")
+    Matt = Human("Matt", role=Role.FAITHFUL)
+    Molly = Human("Molly")
+    Nic = Human("Nic")
+    Phoebe = Human("Phoebe")
+    Sam = Human("Sam")
+    Samantha = Human("Samantha")
+    Sophie = Human("Sophie")
+    Will = Human("Will")
 
 class Utils():
     def __init__(self):
         pass
 
-    def get_utils(self):
+    def get_all_people(self):
         return [p for p in People]
 
     def get_all_alive_people(self):
         return [p for p in People if p.value.demise == Demise.ALIVE]
+
+    def get_all_people_or_traitors(self):
+        return [p for p in People if p.value.role == Role.TRAITOR or p.value.demise == Demise.ALIVE]
+
+    def get_all_traitors(self):
+        return [p for p in People if p.value.role == Role.TRAITOR]
 
     def get_votes_for_all_days_in_order(self):
         voting_files = [f for f in os.listdir() if f.startswith('day')]
@@ -64,10 +73,14 @@ class Utils():
     def get_person_by_name(self, name):
         return People[name]
 
+    def get_is_person_alive_by_name(self, name):
+        person = self.get_person_by_name(name)
+        return person.value.demise == Demise.ALIVE
+
     def get_is_person_faithful_and_voted_out_by_name(self, name):
         return People[name].value.role == Role.FAITHFUL and People[name].value.demise == Demise.VOTED
 
-    def get_votes_per_person(self):
+    def get_votes_per_person(self, alive_people=True):
         votes_per_person = {p.value.name: [] for p in People}
         votes_by_day = self.get_votes_for_all_days_in_order()
         for votes in votes_by_day:

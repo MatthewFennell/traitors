@@ -1,0 +1,31 @@
+# from utils import People as p
+
+
+# votes = {
+#     p.Annabel.value.name: "",
+#     p.Ben.value.name: "",
+#     p.Elliott.value.name: "",
+#     p.Euthyme.value.name: "",
+#     p.Gabby.value.name: "",
+#     p.Gary.value.name: "",
+#     p.Gazell.value.name: "",
+#     p.James.value.name: "",
+#     p.Jegor.value.name: "",
+#     p.Jesse.value.name: "",
+#     p.Jessica.value.name: "",
+#     p.Joel.value.name: "",
+#     p.Joey.value.name: "",
+#     p.Julian.value.name: "",
+#     p.Kay.value.name: "",
+#     p.Katie.value.name: "",
+#     p.Lewis.value.name: "",
+#     p.Mark.value.name: "",
+#     p.Matt.value.name: "",
+#     p.Molly.value.name: "",
+#     p.Nic.value.name: "",
+#     p.Phoebe.value.name: "",
+#     p.Sam.value.name: "",
+#     p.Samantha.value.name: "",
+#     p.Sophie.value.name: "",
+#     p.Will.value.name: "",
+# }
