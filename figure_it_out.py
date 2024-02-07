@@ -37,7 +37,6 @@ def get_number_of_times_each_person_voted_for_a_faithful_that_have_been_voted_ou
     votes = utils.get_votes_per_person()
     all_alive_people = utils.get_all_alive_people()
     votes_on_faithful = {p.value.name: 0 for p in all_alive_people}
-
     for key, val in votes.items():
         if not utils.get_is_person_alive_by_name(key):
             continue
