@@ -4,7 +4,7 @@ from utils import People as p
 votes = {
     p.Annabel.value.name: p.Gabby,
     p.Ben.value.name: p.Julian,
-    p.Elliott.value.name: p.Elliott,
+    # p.Elliott.value.name: p.Elliott,
     p.Euthyme.value.name: p.Elliott,
     p.Gabby.value.name: p.Elliott,
     p.Gary.value.name: p.Jess,
