@@ -23,28 +23,28 @@ class Human():
 class People(Enum):
 
     Annabel = Human("Annabel")
-    Ben = Human("Ben")
+    Ben = Human("Ben", role=Role.FAITHFUL, demise=Demise.KILLED)
     Elliott = Human("Elliott", role=Role.FAITHFUL, demise=Demise.VOTED)
-    Euthyme = Human("Euthyme")
+    Euthyme = Human("Euthyme", role=Role.FAITHFUL, demise=Demise.KILLED)
     Gabby = Human("Gabby")
-    Gary = Human("Gary", role=Role.FAITHFUL, demise=Demise.VOTED)
+    Gary = Human("Gary", role=Role.FAITHFUL, demise=Demise.KILLED)
     Gazell = Human("Gazell")
-    James = Human("James")
+    James = Human("James", role=Role.FAITHFUL, demise=Demise.VOTED)
     Jegor = Human("Jegor")
     Jess = Human("Jess")
-    Jesse = Human("Jesse")
-    Joel = Human("Joel")
-    Joey = Human("Joey")
+    Jesse = Human("Jesse", role=Role.TRAITOR, demise=Demise.VOTED)
+    Joel = Human("Joel", role=Role.FAITHFUL, demise=Demise.VOTED)
+    Joey = Human("Joey", role=Role.TRAITOR, demise=Demise.VOTED)
     Julian = Human("Julian", role=Role.FAITHFUL, demise=Demise.VOTED)
     Kay = Human("Kay")
     Katie = Human("Katie")
     Lewis = Human("Lewis")
-    Mark = Human("Mark")
+    Mark = Human("Mark", role=Role.FAITHFUL, demise=Demise.KILLED)
     Matt = Human("Matt", role=Role.FAITHFUL)
     Molly = Human("Molly")
     Nic = Human("Nic")
-    Phoebe = Human("Phoebe")
-    Sam = Human("Sam")
+    Phoebe = Human("Phoebe", role=Role.FAITHFUL, demise=Demise.KILLED)
+    Sam = Human("Sam", role=Role.FAITHFUL, demise=Demise.KILLED)
     Samantha = Human("Samantha")
     Sophie = Human("Sophie")
     Will = Human("Will")
@@ -87,5 +87,10 @@ class Utils():
             for key, value in votes.items():
                 votes_per_person[key].append(value.value.name)
         return votes_per_person
+    
+    def calculate_votes(self, votes_per_person):
+        #  need to fix properly
+
+        return None
             
     
